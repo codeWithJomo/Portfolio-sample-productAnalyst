@@ -1,0 +1,2426 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>David Adebayo — Product Analyst & Aspiring Product Manager</title>
+    <meta
+      name="description"
+      content="Portfolio of David Adebayo, Product Analyst and aspiring Product Manager in Abuja, Nigeria. Case studies in fintech reconciliation, logistics dispatch and merchant onboarding."
+    />
+    <meta
+      property="og:title"
+      content="David Adebayo — Product Analyst & Aspiring Product Manager"
+    />
+    <meta
+      property="og:description"
+      content="Selected product work in fintech, logistics and B2B onboarding. Requirements discovery, workflow design and data-driven decisions."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #faf8f5;
+        --surface: #fff;
+        --subtle: #f3efe9;
+        --ink: #181a1b;
+        --ink2: #484e54;
+        --muted: #6e757d;
+        --green: #144d34;
+        --green-h: #0d3825;
+        --green-s: #e8f2ec;
+        --green-b: #c1dbcb;
+        --amber: #b45309;
+        --amber-s: #fef3e2;
+        --red: #9b2c2c;
+        --red-s: #fdecec;
+        --line: rgba(24, 26, 27, 0.09);
+        --line2: rgba(24, 26, 27, 0.18);
+        --sans:
+          "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, sans-serif;
+        --mono: "JetBrains Mono", SFMono-Regular, Menlo, monospace;
+        --r-sm: 6px;
+        --r-md: 10px;
+        --r-lg: 16px;
+        --sh-md: 0 4px 16px -4px rgba(24, 26, 27, 0.08);
+        --sh-lg: 0 24px 48px -16px rgba(24, 26, 27, 0.18);
+        --t: 160ms cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 84px;
+        color-scheme: light;
+      }
+      body {
+        background: var(--bg);
+        color: var(--ink);
+        font-family: var(--sans);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+      }
+      :focus-visible {
+        outline: 2px solid var(--green);
+        outline-offset: 3px;
+      }
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+      }
+      p {
+        color: var(--ink2);
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      button {
+        font-family: inherit;
+      }
+      .container {
+        width: 100%;
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+      .section {
+        padding: 5rem 0;
+      }
+      .section.tight {
+        padding: 3.5rem 0;
+      }
+      .kicker {
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.09em;
+        color: var(--green);
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+      .section-head {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 2.25rem;
+      }
+      .section-title {
+        font-size: clamp(1.6rem, 3vw, 2.15rem);
+        font-weight: 800;
+        letter-spacing: -0.03em;
+        text-wrap: balance;
+      }
+      .section-note {
+        font-size: 0.9375rem;
+        color: var(--muted);
+        max-width: 40ch;
+      }
+      .mono {
+        font-family: var(--mono);
+      }
+      .tnum {
+        font-variant-numeric: tabular-nums;
+      }
+
+      /* Header */
+      .top {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: rgba(250, 248, 245, 0.94);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--line);
+      }
+      .top-in {
+        height: 68px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.5rem;
+      }
+      .brand {
+        font-weight: 800;
+        font-size: 1.05rem;
+        letter-spacing: -0.02em;
+        white-space: nowrap;
+      }
+      .brand:hover {
+        color: var(--green);
+      }
+      .nav {
+        display: none;
+        list-style: none;
+        gap: 1.75rem;
+      }
+      @media (min-width: 820px) {
+        .nav {
+          display: flex;
+        }
+      }
+      .nav a {
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--ink2);
+        padding: 0.25rem 0;
+        position: relative;
+      }
+      .nav a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 1.5px;
+        width: 0;
+        background: var(--green);
+        transition: width var(--t);
+      }
+      .nav a:hover,
+      .nav a.active {
+        color: var(--ink);
+      }
+      .nav a:hover::after,
+      .nav a.active::after {
+        width: 100%;
+      }
+      .top-actions {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        font-size: 0.875rem;
+        font-weight: 600;
+        padding: 0.7rem 1.2rem;
+        border-radius: var(--r-sm);
+        border: 1px solid transparent;
+        cursor: pointer;
+        white-space: nowrap;
+        transition: all var(--t);
+        line-height: 1;
+      }
+      .btn-p {
+        background: var(--green);
+        color: #fff;
+      }
+      .btn-p:hover {
+        background: var(--green-h);
+        box-shadow: 0 2px 8px rgba(20, 77, 52, 0.25);
+      }
+      .btn-s {
+        background: var(--surface);
+        color: var(--ink);
+        border-color: var(--line2);
+      }
+      .btn-s:hover {
+        background: var(--subtle);
+        border-color: var(--ink);
+      }
+      .btn-sm {
+        font-size: 0.8125rem;
+        padding: 0.55rem 0.9rem;
+      }
+      .menu-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 4px;
+        width: 38px;
+        height: 38px;
+        padding: 8px;
+        background: transparent;
+        border: 1px solid var(--line);
+        border-radius: var(--r-sm);
+        cursor: pointer;
+      }
+      .menu-btn span {
+        height: 2px;
+        background: var(--ink);
+        width: 100%;
+      }
+      @media (min-width: 820px) {
+        .menu-btn {
+          display: none;
+        }
+      }
+      .drawer {
+        position: fixed;
+        top: 68px;
+        left: 0;
+        right: 0;
+        background: var(--surface);
+        border-bottom: 1px solid var(--line);
+        box-shadow: var(--sh-lg);
+        padding: 1rem 1.5rem 1.5rem;
+        display: none;
+        flex-direction: column;
+        z-index: 49;
+      }
+      .drawer.open {
+        display: flex;
+      }
+      .drawer a {
+        padding: 0.75rem 0;
+        border-bottom: 1px solid var(--line);
+        font-weight: 500;
+      }
+      @media (max-width: 480px) {
+        .top-actions .hide-xs {
+          display: none;
+        }
+      }
+
+      /* Hero */
+      .hero {
+        padding: 4rem 0 2.5rem;
+      }
+      .hero-grid {
+        display: grid;
+        gap: 2.5rem;
+        align-items: center;
+      }
+      @media (min-width: 960px) {
+        .hero-grid {
+          grid-template-columns: 1.3fr 0.8fr;
+          gap: 4rem;
+        }
+      }
+      .hero h1 {
+        font-size: clamp(2.4rem, 5.2vw, 3.9rem);
+        font-weight: 800;
+        letter-spacing: -0.04em;
+        line-height: 1.05;
+        margin: 0.75rem 0 1.1rem;
+        text-wrap: balance;
+      }
+      .hero h1 em {
+        font-style: normal;
+        color: var(--green);
+      }
+      .hero-lead {
+        font-size: 1.125rem;
+        max-width: 52ch;
+        margin-bottom: 1.75rem;
+      }
+      .hero-cta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-bottom: 1.75rem;
+      }
+      .hero-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem 1.25rem;
+        font-size: 0.8125rem;
+        color: var(--muted);
+      }
+      .hero-meta span::before {
+        content: "";
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--green);
+        margin-right: 0.5rem;
+        vertical-align: middle;
+      }
+      .portrait {
+        border-radius: var(--r-lg);
+        border: 1px solid var(--line);
+        background: var(--subtle);
+        overflow: hidden;
+        box-shadow: var(--sh-md);
+        aspect-ratio: 4/5;
+        position: relative;
+        max-width: 420px;
+        justify-self: end;
+        width: 100%;
+      }
+      .portrait img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .portrait-fb {
+        position: absolute;
+        inset: 0;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(145deg, #f3efe9, #e8f2ec);
+        text-align: center;
+        padding: 2rem;
+      }
+      .portrait-fb b {
+        width: 84px;
+        height: 84px;
+        border-radius: 50%;
+        background: var(--green);
+        color: #fff;
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+      }
+      .portrait-tag {
+        position: absolute;
+        left: 1rem;
+        bottom: 1rem;
+        right: 1rem;
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(6px);
+        border: 1px solid var(--line);
+        border-radius: var(--r-md);
+        padding: 0.75rem 1rem;
+        font-size: 0.8125rem;
+      }
+      .portrait-tag b {
+        display: block;
+        font-size: 0.875rem;
+      }
+      .portrait-tag span {
+        color: var(--muted);
+      }
+
+      /* Stat strip */
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1px;
+        background: var(--line);
+        border: 1px solid var(--line);
+        border-radius: var(--r-md);
+        overflow: hidden;
+        margin-top: 3rem;
+      }
+      @media (min-width: 900px) {
+        .stats {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+      .stat {
+        background: var(--surface);
+        padding: 1.25rem 1.4rem;
+      }
+      .stat b {
+        display: block;
+        font-size: 1.75rem;
+        font-weight: 800;
+        letter-spacing: -0.03em;
+        line-height: 1.1;
+      }
+      .stat b.g {
+        color: var(--green);
+      }
+      .stat span {
+        font-size: 0.8125rem;
+        color: var(--muted);
+      }
+
+      /* Work */
+      .work-grid {
+        display: grid;
+        gap: 1.75rem;
+      }
+      @media (min-width: 900px) {
+        .work-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .work-card.feature {
+          grid-column: 1/-1;
+          display: grid;
+          grid-template-columns: 1.15fr 1fr;
+        }
+      }
+      .work-card {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: var(--r-lg);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        transition:
+          border-color var(--t),
+          box-shadow var(--t),
+          transform var(--t);
+        text-align: left;
+      }
+      .work-card:hover {
+        border-color: var(--line2);
+        box-shadow: var(--sh-lg);
+        transform: translateY(-3px);
+      }
+      .work-card:hover .go {
+        color: var(--green);
+      }
+      .work-card:hover .go i {
+        transform: translateX(4px);
+      }
+      .thumb {
+        background: linear-gradient(160deg, #f3efe9, #eaf1ec);
+        border-bottom: 1px solid var(--line);
+        padding: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 300px;
+        position: relative;
+        overflow: hidden;
+      }
+      .feature .thumb {
+        border-bottom: 0;
+        border-right: 1px solid var(--line);
+        min-height: 380px;
+      }
+      @media (max-width: 899px) {
+        .feature .thumb {
+          border-right: 0;
+          border-bottom: 1px solid var(--line);
+          min-height: 300px;
+        }
+      }
+      .work-body {
+        padding: 1.75rem;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
+      .work-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        margin-bottom: 0.9rem;
+      }
+      .tag {
+        font-size: 0.6875rem;
+        font-weight: 600;
+        font-family: var(--mono);
+        padding: 0.25rem 0.55rem;
+        border-radius: 4px;
+        background: var(--subtle);
+        color: var(--ink2);
+        border: 1px solid var(--line);
+      }
+      .tag.g {
+        background: var(--green-s);
+        color: var(--green);
+        border-color: var(--green-b);
+      }
+      .work-title {
+        font-size: 1.4rem;
+        font-weight: 800;
+        letter-spacing: -0.025em;
+        margin-bottom: 0.6rem;
+        text-wrap: balance;
+      }
+      .feature .work-title {
+        font-size: 1.75rem;
+      }
+      .work-sum {
+        font-size: 0.9375rem;
+        margin-bottom: 1.25rem;
+      }
+      .work-metrics {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.75rem;
+        padding: 1rem 0;
+        border-top: 1px solid var(--line);
+        margin-top: auto;
+      }
+      .wm b {
+        display: block;
+        font-size: 1.3rem;
+        font-weight: 800;
+        color: var(--green);
+        letter-spacing: -0.03em;
+        line-height: 1.1;
+      }
+      .wm span {
+        font-size: 0.6875rem;
+        color: var(--muted);
+        line-height: 1.3;
+        display: block;
+        margin-top: 0.2rem;
+      }
+      .go {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 0.875rem;
+        font-weight: 700;
+        padding-top: 0.9rem;
+        border-top: 1px solid var(--line);
+        transition: color var(--t);
+      }
+      .go i {
+        font-style: normal;
+        transition: transform var(--t);
+      }
+
+      /* Mock UI components */
+      .mock {
+        width: 100%;
+        max-width: 440px;
+        background: #fff;
+        border: 1px solid var(--line2);
+        border-radius: 12px;
+        box-shadow: 0 20px 40px -18px rgba(24, 26, 27, 0.28);
+        overflow: hidden;
+        font-size: 0.75rem;
+      }
+      .mock-bar {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.6rem 0.85rem;
+        border-bottom: 1px solid var(--line);
+        background: #fbfaf8;
+      }
+      .mock-bar i {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #ddd;
+      }
+      .mock-bar span {
+        margin-left: 0.5rem;
+        font-weight: 600;
+        color: var(--ink2);
+        font-size: 0.6875rem;
+      }
+      .mock-body {
+        padding: 1rem;
+      }
+      .kpis {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+        margin-bottom: 0.9rem;
+      }
+      .kpi {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 0.55rem 0.65rem;
+      }
+      .kpi small {
+        display: block;
+        color: var(--muted);
+        font-size: 0.625rem;
+      }
+      .kpi b {
+        font-size: 1rem;
+        letter-spacing: -0.02em;
+      }
+      .kpi b.g {
+        color: var(--green);
+      }
+      .row {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr auto;
+        gap: 0.5rem;
+        align-items: center;
+        padding: 0.5rem 0;
+        border-top: 1px solid var(--line);
+        font-size: 0.6875rem;
+      }
+      .row .mono {
+        color: var(--muted);
+      }
+      .chip {
+        font-size: 0.625rem;
+        font-weight: 700;
+        padding: 0.15rem 0.45rem;
+        border-radius: 999px;
+      }
+      .chip.ok {
+        background: var(--green-s);
+        color: var(--green);
+      }
+      .chip.wait {
+        background: var(--amber-s);
+        color: var(--amber);
+      }
+      .chip.bad {
+        background: var(--red-s);
+        color: var(--red);
+      }
+      .phone {
+        width: 200px;
+        background: #fff;
+        border: 6px solid #222;
+        border-radius: 28px;
+        overflow: hidden;
+        box-shadow: 0 22px 40px -16px rgba(0, 0, 0, 0.4);
+      }
+      .phone-top {
+        background: var(--green);
+        color: #fff;
+        padding: 0.7rem 0.8rem;
+        font-size: 0.6875rem;
+        font-weight: 700;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .off {
+        font-size: 0.5625rem;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 0.1rem 0.4rem;
+        border-radius: 999px;
+        font-weight: 600;
+      }
+      .steps {
+        padding: 0.8rem;
+      }
+      .step {
+        display: flex;
+        align-items: center;
+        gap: 0.55rem;
+        padding: 0.4rem 0;
+        font-size: 0.6875rem;
+        color: var(--muted);
+        position: relative;
+      }
+      .step b {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        border: 1.5px solid var(--line2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.5625rem;
+        flex-shrink: 0;
+        background: #fff;
+      }
+      .step.done {
+        color: var(--ink);
+      }
+      .step.done b {
+        background: var(--green);
+        border-color: var(--green);
+        color: #fff;
+      }
+      .step.now {
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .step.now b {
+        border-color: var(--green);
+        color: var(--green);
+      }
+      .phone-btn {
+        margin: 0.2rem 0.8rem 0.8rem;
+        background: var(--green);
+        color: #fff;
+        text-align: center;
+        font-size: 0.6875rem;
+        font-weight: 700;
+        padding: 0.55rem;
+        border-radius: 6px;
+      }
+      .tiers {
+        width: 100%;
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+      }
+      .tier {
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 0.75rem 0.9rem;
+      }
+      .tier.hl {
+        background: var(--green-s);
+        border-color: var(--green-b);
+      }
+      .tier-h {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 700;
+        font-size: 0.75rem;
+        margin-bottom: 0.4rem;
+      }
+      .tier-h span {
+        font-family: var(--mono);
+        color: var(--green);
+        font-size: 0.625rem;
+        font-weight: 500;
+      }
+      .bar {
+        height: 8px;
+        border-radius: 4px;
+        background: #ece8e1;
+        overflow: hidden;
+      }
+      .bar i {
+        display: block;
+        height: 100%;
+        background: var(--green);
+        border-radius: 4px;
+      }
+      .tier small {
+        font-size: 0.625rem;
+        color: var(--muted);
+        display: block;
+        margin-top: 0.35rem;
+      }
+
+      /* About / skills */
+      .about-grid {
+        display: grid;
+        gap: 2.5rem;
+      }
+      @media (min-width: 900px) {
+        .about-grid {
+          grid-template-columns: 1fr 1.1fr;
+          gap: 4rem;
+        }
+      }
+      .about-lead {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--ink);
+        line-height: 1.5;
+        letter-spacing: -0.015em;
+        margin-bottom: 1rem;
+      }
+      .principles {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 1fr 1fr;
+      }
+      @media (max-width: 560px) {
+        .principles {
+          grid-template-columns: 1fr;
+        }
+      }
+      .pr {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: var(--r-md);
+        padding: 1.1rem;
+      }
+      .pr b {
+        display: block;
+        font-size: 0.9375rem;
+        margin-bottom: 0.3rem;
+      }
+      .pr b span {
+        font-family: var(--mono);
+        font-size: 0.75rem;
+        color: var(--green);
+        margin-right: 0.4rem;
+        font-weight: 500;
+      }
+      .pr p {
+        font-size: 0.8125rem;
+        line-height: 1.55;
+      }
+      .skills {
+        display: grid;
+        gap: 1rem;
+        margin-top: 3rem;
+      }
+      @media (min-width: 760px) {
+        .skills {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+      .skill {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: var(--r-md);
+        padding: 1.25rem;
+      }
+      .skill h4 {
+        font-size: 0.9375rem;
+        margin: 0.1rem 0 0.75rem;
+      }
+      .skill .mono {
+        font-size: 0.6875rem;
+        color: var(--green);
+        font-weight: 500;
+      }
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.35rem;
+      }
+      .chips span {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.55rem;
+        border-radius: 4px;
+        background: var(--subtle);
+        color: var(--ink2);
+      }
+      .tools {
+        margin-top: 1rem;
+        padding: 1rem 1.25rem;
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: var(--r-md);
+        font-size: 0.8125rem;
+        color: var(--ink2);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem 1rem;
+        align-items: center;
+      }
+      .tools b {
+        font-size: 0.6875rem;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        color: var(--muted);
+      }
+
+      /* Experience */
+      .xp {
+        display: flex;
+        flex-direction: column;
+      }
+      .xp-item {
+        display: grid;
+        gap: 0.5rem 2rem;
+        padding: 1.5rem 0;
+        border-top: 1px solid var(--line);
+      }
+      .xp-item:last-child {
+        border-bottom: 1px solid var(--line);
+      }
+      @media (min-width: 800px) {
+        .xp-item {
+          grid-template-columns: 200px 1fr;
+        }
+      }
+      .xp-when {
+        font-family: var(--mono);
+        font-size: 0.8125rem;
+        color: var(--muted);
+      }
+      .xp h3 {
+        font-size: 1.1rem;
+      }
+      .xp .co {
+        color: var(--green);
+        font-weight: 600;
+        font-size: 0.875rem;
+        margin-bottom: 0.6rem;
+      }
+      .xp ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+      }
+      .xp li {
+        font-size: 0.9rem;
+        color: var(--ink2);
+        padding-left: 1rem;
+        position: relative;
+      }
+      .xp li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.65em;
+        width: 5px;
+        height: 5px;
+        background: var(--green);
+        border-radius: 1px;
+      }
+      .edu {
+        display: grid;
+        gap: 1rem;
+        margin-top: 2.5rem;
+      }
+      @media (min-width: 800px) {
+        .edu {
+          grid-template-columns: 1.2fr 1fr 1fr 1fr;
+        }
+      }
+      .edu > div {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: var(--r-md);
+        padding: 1.1rem;
+      }
+      .edu small {
+        display: block;
+        font-family: var(--mono);
+        font-size: 0.6875rem;
+        color: var(--muted);
+        margin-bottom: 0.35rem;
+      }
+      .edu b {
+        display: block;
+        font-size: 0.875rem;
+        line-height: 1.35;
+        margin-bottom: 0.2rem;
+      }
+      .edu span {
+        font-size: 0.75rem;
+        color: var(--muted);
+      }
+
+      /* Contact */
+      .cta {
+        background: var(--green);
+        color: #fff;
+        border-radius: var(--r-lg);
+        padding: 3rem 2rem;
+        display: grid;
+        gap: 2.5rem;
+      }
+      @media (min-width: 900px) {
+        .cta {
+          grid-template-columns: 1.1fr 1fr;
+          padding: 3.5rem;
+        }
+      }
+      .cta .kicker {
+        color: #a9d3bc;
+      }
+      .cta h2 {
+        color: #fff;
+        font-size: clamp(1.75rem, 3.2vw, 2.5rem);
+        font-weight: 800;
+        letter-spacing: -0.03em;
+        margin-bottom: 1rem;
+        text-wrap: balance;
+      }
+      .cta p {
+        color: #d3e6da;
+        margin-bottom: 1.5rem;
+        max-width: 46ch;
+      }
+      .cta-links {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        font-size: 0.9375rem;
+      }
+      .cta-links a {
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        color: #fff;
+        font-weight: 600;
+      }
+      .copy {
+        margin-left: 0.6rem;
+        font-size: 0.6875rem;
+        font-weight: 700;
+        padding: 0.25rem 0.6rem;
+        border-radius: 4px;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        background: transparent;
+        color: #fff;
+        cursor: pointer;
+      }
+      .copy:hover {
+        background: #fff;
+        color: var(--green);
+      }
+      .form {
+        background: #fff;
+        border-radius: var(--r-md);
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .fg {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+      }
+      .fg label {
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: var(--ink);
+      }
+      .fg input,
+      .fg textarea {
+        font-family: var(--sans);
+        font-size: 0.9rem;
+        padding: 0.65rem 0.85rem;
+        border: 1px solid var(--line2);
+        border-radius: var(--r-sm);
+        color: var(--ink);
+        width: 100%;
+      }
+      .fg input:focus,
+      .fg textarea:focus {
+        outline: none;
+        border-color: var(--green);
+      }
+      .fg textarea {
+        min-height: 90px;
+        resize: vertical;
+      }
+      .status {
+        display: none;
+        font-size: 0.8125rem;
+        padding: 0.7rem 0.9rem;
+        border-radius: var(--r-sm);
+      }
+      .status.ok {
+        display: block;
+        background: var(--green-s);
+        color: var(--green);
+        border: 1px solid var(--green-b);
+      }
+      .status.err {
+        display: block;
+        background: var(--red-s);
+        color: var(--red);
+        border: 1px solid #f1b5b5;
+      }
+      .foot {
+        padding: 2rem 0;
+        border-top: 1px solid var(--line);
+        margin-top: 4rem;
+        font-size: 0.8125rem;
+        color: var(--muted);
+      }
+      .foot .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+
+      /* Case overlay */
+      .modal {
+        position: fixed;
+        inset: 0;
+        background: rgba(24, 26, 27, 0.6);
+        backdrop-filter: blur(4px);
+        z-index: 100;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+      }
+      .modal.open {
+        display: flex;
+      }
+      .dialog {
+        background: var(--surface);
+        border-radius: var(--r-lg);
+        width: 100%;
+        max-width: 880px;
+        max-height: 90vh;
+        overflow-y: auto;
+        box-shadow: var(--sh-lg);
+        display: flex;
+        flex-direction: column;
+      }
+      .dialog-h {
+        padding: 1.5rem 1.75rem 1.1rem;
+        border-bottom: 1px solid var(--line);
+        position: sticky;
+        top: 0;
+        background: var(--surface);
+        z-index: 2;
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        align-items: flex-start;
+      }
+      .dialog-h .mono {
+        font-size: 0.6875rem;
+        color: var(--green);
+      }
+      .dialog-h h2 {
+        font-size: 1.25rem;
+        margin-top: 0.2rem;
+      }
+      .x {
+        width: 36px;
+        height: 36px;
+        border: 1px solid var(--line);
+        border-radius: var(--r-sm);
+        background: transparent;
+        cursor: pointer;
+        font-size: 1.1rem;
+        color: var(--muted);
+        flex-shrink: 0;
+      }
+      .x:hover {
+        background: var(--subtle);
+        color: var(--ink);
+      }
+      .tabs {
+        display: flex;
+        gap: 0.4rem;
+        padding: 0.65rem 1.75rem;
+        background: var(--subtle);
+        border-bottom: 1px solid var(--line);
+        overflow-x: auto;
+      }
+      .tabs button {
+        font-size: 0.8125rem;
+        font-weight: 600;
+        padding: 0.4rem 0.8rem;
+        border-radius: var(--r-sm);
+        background: transparent;
+        border: 1px solid transparent;
+        color: var(--ink2);
+        cursor: pointer;
+        white-space: nowrap;
+      }
+      .tabs button.active {
+        background: #fff;
+        color: var(--ink);
+        border-color: var(--line);
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+      }
+      .dialog-b {
+        padding: 1.75rem;
+      }
+      .dialog-b h4 {
+        font-size: 1.05rem;
+        margin-bottom: 0.5rem;
+      }
+      .dialog-b p {
+        font-size: 0.9375rem;
+        margin-bottom: 1rem;
+      }
+      .spec {
+        background: var(--subtle);
+        border: 1px solid var(--line);
+        border-radius: var(--r-sm);
+        padding: 1rem;
+        font-family: var(--mono);
+        font-size: 0.78rem;
+        color: var(--ink);
+        overflow-x: auto;
+        margin: 1rem 0;
+        white-space: pre;
+        line-height: 1.6;
+      }
+      .ba {
+        display: flex;
+        flex-direction: column;
+        gap: 1.1rem;
+        margin: 1rem 0 1.5rem;
+      }
+      .ba-row small {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.8125rem;
+        font-weight: 600;
+        margin-bottom: 0.35rem;
+      }
+      .ba-row small span {
+        font-family: var(--mono);
+        font-weight: 500;
+        color: var(--green);
+      }
+      .ba-bars {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+      }
+      .ba-bar {
+        height: 20px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        padding: 0 0.5rem;
+        font-size: 0.6875rem;
+        font-weight: 600;
+        font-family: var(--mono);
+        min-width: 56px;
+      }
+      .ba-bar.before {
+        background: #e4dfd7;
+        color: var(--ink2);
+      }
+      .ba-bar.after {
+        background: var(--green);
+        color: #fff;
+      }
+      .flow {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.5rem;
+        margin: 1rem 0 1.5rem;
+      }
+      .flow div {
+        background: var(--subtle);
+        border: 1px solid var(--line);
+        padding: 0.5rem 0.75rem;
+        border-radius: 6px;
+        font-size: 0.75rem;
+        font-weight: 600;
+      }
+      .flow div.g {
+        background: var(--green-s);
+        border-color: var(--green-b);
+        color: var(--green);
+      }
+      .flow i {
+        font-style: normal;
+        color: var(--muted);
+      }
+      .learn {
+        background: var(--green-s);
+        border: 1px solid var(--green-b);
+        border-radius: var(--r-md);
+        padding: 1rem 1.1rem;
+        font-size: 0.9rem;
+        color: var(--ink);
+      }
+      .learn b {
+        color: var(--green);
+      }
+      .dialog-f {
+        padding: 1rem 1.75rem;
+        border-top: 1px solid var(--line);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        font-size: 0.75rem;
+        color: var(--muted);
+      }
+      .toast {
+        position: fixed;
+        bottom: 1.5rem;
+        right: 1.5rem;
+        background: var(--ink);
+        color: #fff;
+        padding: 0.7rem 1.1rem;
+        border-radius: var(--r-sm);
+        font-size: 0.875rem;
+        z-index: 200;
+        transform: translateY(150%);
+        opacity: 0;
+        transition: all 220ms ease;
+        pointer-events: none;
+      }
+      .toast.show {
+        transform: none;
+        opacity: 1;
+      }
+      @media print {
+        .top,
+        .modal,
+        .toast,
+        .form,
+        .foot,
+        .hero-cta {
+          display: none !important;
+        }
+        body {
+          background: #fff;
+        }
+        .section {
+          padding: 1.5rem 0;
+        }
+        .work-card {
+          break-inside: avoid;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          transition: none !important;
+          scroll-behavior: auto !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="top" id="top">
+      <div class="container">
+        <div class="top-in">
+          <a href="#hero" class="brand">David Adebayo</a>
+          <nav aria-label="Primary">
+            <ul class="nav">
+              <li><a href="#work">Work</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#experience">Experience</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="top-actions">
+            <a href="#contact" class="btn btn-p btn-sm">Get in touch</a>
+            <button
+              class="menu-btn"
+              id="menuBtn"
+              aria-label="Toggle navigation menu"
+              aria-expanded="false"
+            >
+              <span></span><span></span><span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="drawer" id="drawer">
+        <a href="#work">Work</a><a href="#about">About & skills</a
+        ><a href="#experience">Experience</a><a href="#contact">Contact</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="hero">
+        <div class="container">
+          <div class="hero-grid">
+            <div>
+              <span class="kicker">Product Analyst · Aspiring PM · Abuja</span>
+              <h1>
+                I turn messy operations into <em>products people use.</em>
+              </h1>
+              <p class="hero-lead">
+                Three years in Nigerian fintech and logistics, writing PRDs,
+                mapping workflows and working alongside engineers to ship things
+                that move real numbers.
+              </p>
+              <div class="hero-cta">
+                <a href="#work" class="btn btn-p">See the work ↓</a>
+                <button class="btn btn-s" id="resumeBtn">Resume brief</button>
+              </div>
+              <div class="hero-meta">
+                <span>Open to hybrid & remote</span>
+                <span>B2B SaaS, fintech, logistics</span>
+              </div>
+            </div>
+            <div class="portrait">
+              <img
+                src="/assets/images/david_adebayo_portrait_1791831676689.jpg"
+                alt="David Adebayo, Product Analyst based in Abuja, Nigeria"
+                loading="eager"
+                referrerpolicy="no-referrer"
+                onerror="
+                  this.style.display = 'none';
+                  this.nextElementSibling.style.display = 'flex';
+                "
+              />
+              <div class="portrait-fb" aria-hidden="true">
+                <b>DA</b><strong>David Adebayo</strong>
+              </div>
+              <div class="portrait-tag">
+                <b>David Adebayo</b
+                ><span>Currently at KoraPoint Solutions</span>
+              </div>
+            </div>
+          </div>
+          <div class="stats" aria-label="Impact highlights">
+            <div class="stat">
+              <b class="tnum">₦34.2M</b><span>Float liquidity unlocked</span>
+            </div>
+            <div class="stat">
+              <b class="tnum g">18 hrs → 22 min</b
+              ><span>Dispute resolution time</span>
+            </div>
+            <div class="stat">
+              <b class="tnum">38% → 71%</b
+              ><span>Merchant onboarding completion</span>
+            </div>
+            <div class="stat">
+              <b class="tnum g">14+ PRDs</b><span>Shipped with dev squads</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="work">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="kicker">Selected work</span>
+              <h2 class="section-title">
+                Three problems, three shipped fixes.
+              </h2>
+            </div>
+            <p class="section-note">
+              Open any project for the problem, the spec and the results.
+            </p>
+          </div>
+
+          <div class="work-grid">
+            <!-- Fintech -->
+            <article
+              class="work-card feature"
+              data-study="fintech"
+              tabindex="0"
+              role="button"
+              aria-label="Open case study: Settlement exceptions in POS agency banking"
+            >
+              <div class="thumb">
+                <div class="mock" aria-hidden="true">
+                  <div class="mock-bar">
+                    <i></i><i></i><i></i
+                    ><span>Exception queue · Reconciliation</span>
+                  </div>
+                  <div class="mock-body">
+                    <div class="kpis">
+                      <div class="kpi">
+                        <small>Auto-resolved</small><b class="g">88.4%</b>
+                      </div>
+                      <div class="kpi">
+                        <small>Avg. resolution</small><b>22 min</b>
+                      </div>
+                      <div class="kpi"><small>Open</small><b>137</b></div>
+                    </div>
+                    <div class="row">
+                      <span>POS-4471 · ₦45,000</span
+                      ><span class="mono">Switch A</span
+                      ><span class="chip ok">Credited</span>
+                    </div>
+                    <div class="row">
+                      <span>POS-2208 · ₦20,000</span
+                      ><span class="mono">Switch B</span
+                      ><span class="chip wait">Re-querying</span>
+                    </div>
+                    <div class="row">
+                      <span>POS-9930 · ₦120,000</span
+                      ><span class="mono">Switch A</span
+                      ><span class="chip ok">Reversed</span>
+                    </div>
+                    <div class="row">
+                      <span>POS-1184 · ₦15,500</span
+                      ><span class="mono">Switch C</span
+                      ><span class="chip bad">Manual review</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="work-body">
+                <div class="work-tags">
+                  <span class="tag g">Fintech</span
+                  ><span class="tag">KoraPoint</span
+                  ><span class="tag">2024–25</span>
+                </div>
+                <h3 class="work-title">
+                  Fixing stuck money in POS agency banking
+                </h3>
+                <p class="work-sum">
+                  4.2% of daily cashouts landed in dispute because switch
+                  webhooks arrived after the POS session timed out. I specced an
+                  automated reconciliation service and a self-service re-query
+                  button on the terminal.
+                </p>
+                <div class="work-metrics">
+                  <div class="wm">
+                    <b class="tnum">22 min</b
+                    ><span>resolution, from 18 hrs</span>
+                  </div>
+                  <div class="wm">
+                    <b class="tnum">₦34.2M</b
+                    ><span>float unlocked in 90 days</span>
+                  </div>
+                  <div class="wm">
+                    <b class="tnum">−41%</b><span>support tickets</span>
+                  </div>
+                </div>
+                <div class="go">View case study <i>→</i></div>
+              </div>
+            </article>
+
+            <!-- Logistics -->
+            <article
+              class="work-card"
+              data-study="logistics"
+              tabindex="0"
+              role="button"
+              aria-label="Open case study: Offline-first courier dispatch"
+            >
+              <div class="thumb">
+                <div class="phone" aria-hidden="true">
+                  <div class="phone-top">
+                    <span>Delivery #A-2291</span
+                    ><span class="off">Offline</span>
+                  </div>
+                  <div class="steps">
+                    <div class="step done"><b>✓</b>Picked up at hub</div>
+                    <div class="step done"><b>✓</b>In transit</div>
+                    <div class="step now"><b>3</b>Arrived at address</div>
+                    <div class="step"><b>4</b>OTP handover</div>
+                    <div class="step"><b>5</b>Delivered</div>
+                  </div>
+                  <div class="phone-btn">Confirm arrival</div>
+                </div>
+              </div>
+              <div class="work-body">
+                <div class="work-tags">
+                  <span class="tag g">Logistics</span
+                  ><span class="tag">ApexLogistics</span
+                  ><span class="tag">2023</span>
+                </div>
+                <h3 class="work-title">
+                  An offline-first dispatch stepper for riders
+                </h3>
+                <p class="work-sum">
+                  Dispatch ran on WhatsApp groups and paper waybills. I shadowed
+                  hub dispatchers and specced a lightweight PWA that logs
+                  milestones offline and confirms handover by SMS OTP.
+                </p>
+                <div class="work-metrics">
+                  <div class="wm">
+                    <b class="tnum">19→7%</b><span>failed first attempts</span>
+                  </div>
+                  <div class="wm">
+                    <b class="tnum">11 min</b
+                    ><span>batch assignment, from 38</span>
+                  </div>
+                  <div class="wm">
+                    <b class="tnum">100%</b
+                    ><span>digital proof of handover</span>
+                  </div>
+                </div>
+                <div class="go">View case study <i>→</i></div>
+              </div>
+            </article>
+
+            <!-- Growth -->
+            <article
+              class="work-card"
+              data-study="growth"
+              tabindex="0"
+              role="button"
+              aria-label="Open case study: Tiered merchant onboarding"
+            >
+              <div class="thumb">
+                <div class="tiers" aria-hidden="true">
+                  <div class="tier">
+                    <div class="tier-h">
+                      Tier 0 · Developer sandbox<span>minutes</span>
+                    </div>
+                    <div class="bar"><i style="width: 100%"></i></div>
+                    <small>Email + phone OTP. Test keys straight away.</small>
+                  </div>
+                  <div class="tier hl">
+                    <div class="tier-h">
+                      Tier 1 · Live, capped<span>same day</span>
+                    </div>
+                    <div class="bar"><i style="width: 71%"></i></div>
+                    <small
+                      >BVN + account name match. Up to ₦500k a month.</small
+                    >
+                  </div>
+                  <div class="tier">
+                    <div class="tier-h">
+                      Tier 2 · Full settlement<span>&lt; 24 hrs</span>
+                    </div>
+                    <div class="bar"><i style="width: 48%"></i></div>
+                    <small>CAC documents + director identity.</small>
+                  </div>
+                </div>
+              </div>
+              <div class="work-body">
+                <div class="work-tags">
+                  <span class="tag g">B2B SaaS</span
+                  ><span class="tag">KoraPoint Gateway</span
+                  ><span class="tag">2024</span>
+                </div>
+                <h3 class="work-title">
+                  Progressive KYC that stopped merchants dropping off
+                </h3>
+                <p class="work-sum">
+                  62% of SMEs quit a 9-step signup before seeing the product. I
+                  got Legal, Compliance and Tech to agree that KYC gates real
+                  payouts, not sandbox access.
+                </p>
+                <div class="work-metrics">
+                  <div class="wm">
+                    <b class="tnum">38→71%</b><span>onboarding completion</span>
+                  </div>
+                  <div class="wm">
+                    <b class="tnum">&lt; 4 hrs</b
+                    ><span>to first API call, from 9.4 days</span>
+                  </div>
+                  <div class="wm">
+                    <b class="tnum">+48%</b><span>30-day activations</span>
+                  </div>
+                </div>
+                <div class="go">View case study <i>→</i></div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section tight"
+        id="about"
+        style="border-top: 1px solid var(--line)"
+      >
+        <div class="container">
+          <div class="about-grid">
+            <div>
+              <span class="kicker">About</span>
+              <p class="about-lead">
+                I connect what the business needs, what the system can do and
+                what the person using it is up against.
+              </p>
+              <p>
+                I started in data operations, moved through systems analysis and
+                now own discovery and specs for agent banking products. I'd
+                rather spend a morning at Wuse Market with a POS agent than a
+                week guessing in a spreadsheet.
+              </p>
+            </div>
+            <div class="principles">
+              <div class="pr">
+                <b><span>01</span>Discover first</b>
+                <p>
+                  Understand why the workaround exists before drawing a single
+                  wireframe.
+                </p>
+              </div>
+              <div class="pr">
+                <b><span>02</span>Specs as contracts</b>
+                <p>
+                  Given-When-Then criteria and edge-case tables so sprints don't
+                  derail.
+                </p>
+              </div>
+              <div class="pr">
+                <b><span>03</span>Metrics tied to P&L</b>
+                <p>
+                  Settlement exceptions, float velocity and drop-offs, not page
+                  views.
+                </p>
+              </div>
+              <div class="pr">
+                <b><span>04</span>Engineers early</b>
+                <p>Tech leads join problem framing, not just ticket review.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills">
+            <div class="skill">
+              <span class="mono">DISCOVERY</span>
+              <h4>Research</h4>
+              <div class="chips">
+                <span>User interviews</span><span>JTBD</span
+                ><span>Field shadowing</span><span>Usability tests</span>
+              </div>
+            </div>
+            <div class="skill">
+              <span class="mono">SPECIFICATION</span>
+              <h4>Requirements</h4>
+              <div class="chips">
+                <span>PRDs</span><span>BPMN 2.0</span
+                ><span>Given-When-Then</span><span>Edge-case matrices</span>
+              </div>
+            </div>
+            <div class="skill">
+              <span class="mono">QUANTITATIVE</span>
+              <h4>Analytics</h4>
+              <div class="chips">
+                <span>SQL (PostgreSQL)</span><span>Funnels & cohorts</span
+                ><span>Metabase</span><span>Event tracking</span>
+              </div>
+            </div>
+            <div class="skill">
+              <span class="mono">EXECUTION</span>
+              <h4>Delivery</h4>
+              <div class="chips">
+                <span>Backlog grooming</span><span>Sprint planning</span
+                ><span>QA acceptance</span><span>Release notes</span>
+              </div>
+            </div>
+          </div>
+          <div class="tools">
+            <b>Tools</b><span>PostgreSQL</span><span>Metabase</span
+            ><span>Jira</span><span>Linear</span><span>Figma</span
+            ><span>Miro</span><span>Notion</span><span>Postman</span
+            ><span>Mixpanel</span><span>Amplitude</span>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section"
+        id="experience"
+        style="border-top: 1px solid var(--line)"
+      >
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="kicker">Experience</span>
+              <h2 class="section-title">Analyst to product owner.</h2>
+            </div>
+          </div>
+          <div class="xp">
+            <article class="xp-item">
+              <div class="xp-when">Jan 2024 – Present</div>
+              <div>
+                <h3>Product Analyst</h3>
+                <div class="co">KoraPoint Solutions · Abuja (Hybrid)</div>
+                <ul>
+                  <li>
+                    Own discovery, metrics and PRDs for agent banking and
+                    settlement products handling over ₦1.8B a month.
+                  </li>
+                  <li>
+                    Work daily with an 8-engineer squad on 2-week sprints:
+                    backlog priority, grooming and acceptance sign-off.
+                  </li>
+                  <li>
+                    Built Metabase anomaly dashboards that cut mean time to
+                    detect regressions by 65%.
+                  </li>
+                </ul>
+              </div>
+            </article>
+            <article class="xp-item">
+              <div class="xp-when">Jul 2022 – Dec 2023</div>
+              <div>
+                <h3>Junior Business & Systems Analyst</h3>
+                <div class="co">ApexLogistics Africa · Abuja</div>
+                <ul>
+                  <li>
+                    Mapped dispatch and line-haul across 3 fulfilment centres
+                    and found 5 key bottlenecks.
+                  </li>
+                  <li>
+                    Wrote requirements for the rider dispatch PWA and ran UAT
+                    with 40+ riders and controllers.
+                  </li>
+                  <li>
+                    SQL audits of the Abuja–Kano corridor cut delayed dispatches
+                    by 28%.
+                  </li>
+                </ul>
+              </div>
+            </article>
+            <article class="xp-item">
+              <div class="xp-when">Aug 2021 – May 2022</div>
+              <div>
+                <h3>Operations & Data Analyst Intern</h3>
+                <div class="co">Veritas Consulting Group · Abuja</div>
+                <ul>
+                  <li>
+                    Automated Excel reporting models, taking weekly client prep
+                    from 6 hours to 45 minutes.
+                  </li>
+                  <li>
+                    Supported 30+ stakeholder interviews for process
+                    modernisation studies.
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </div>
+          <div class="edu">
+            <div>
+              <small>EDUCATION · 2017–2021</small
+              ><b>B.Sc. Computer Science with Economics</b
+              ><span>University of Abuja · 2:1</span>
+            </div>
+            <div>
+              <small>2024</small><b>Product Analytics Certification</b
+              ><span>Product School</span>
+            </div>
+            <div>
+              <small>2023</small><b>Advanced SQL for Data & Product Decisions</b
+              ><span>Duke / Coursera</span>
+            </div>
+            <div>
+              <small>2022</small><b>Agile Requirements & Story Mapping</b
+              ><span>Scrum Alliance track</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact" style="padding-top: 1rem">
+        <div class="container">
+          <div class="cta">
+            <div>
+              <span class="kicker">Let's talk</span>
+              <h2>Hiring for Product Analyst or APM? Let's talk.</h2>
+              <p>
+                I'm looking for a team building B2B, fintech or logistics
+                products for African markets, with strong documentation habits
+                and close engineering ties.
+              </p>
+              <div class="cta-links">
+                <div>
+                  <a href="mailto:david.adebayo.pm@gmail.com"
+                    >david.adebayo.pm@gmail.com</a
+                  ><button
+                    class="copy"
+                    id="copyBtn"
+                    type="button"
+                    aria-label="Copy email address"
+                  >
+                    Copy
+                  </button>
+                </div>
+                <div>Abuja on-site · Lagos hybrid · Remote (WAT/GMT/CET)</div>
+                <div>
+                  <a
+                    href="https://linkedin.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >LinkedIn ↗</a
+                  >
+                  &nbsp;
+                  <a
+                    href="https://github.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub / Notion specs ↗</a
+                  >
+                </div>
+              </div>
+            </div>
+            <form class="form" id="contactForm" novalidate>
+              <div class="fg">
+                <label for="cName">Name or organisation</label
+                ><input
+                  id="cName"
+                  type="text"
+                  placeholder="Amina Bello, Fintech Hiring Team"
+                  required
+                />
+              </div>
+              <div class="fg">
+                <label for="cEmail">Email</label
+                ><input
+                  id="cEmail"
+                  type="email"
+                  placeholder="amina@company.com"
+                  required
+                />
+              </div>
+              <div class="fg">
+                <label for="cSubject">Subject</label
+                ><input
+                  id="cSubject"
+                  type="text"
+                  placeholder="Product Analyst role"
+                />
+              </div>
+              <div class="fg">
+                <label for="cMsg">Message</label
+                ><textarea
+                  id="cMsg"
+                  placeholder="A few details about the team and role..."
+                  required
+                ></textarea>
+              </div>
+              <button class="btn btn-p" type="submit">Send message</button>
+              <div class="status" id="cStatus" role="status"></div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <div class="container">
+        <span>© David Adebayo · Product Analyst, Abuja</span
+        ><a href="#hero">Back to top ↑</a>
+      </div>
+    </footer>
+
+    <!-- Case study overlay -->
+    <div
+      class="modal"
+      id="caseModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="mTitle"
+    >
+      <div class="dialog">
+        <div class="dialog-h">
+          <div>
+            <div class="mono" id="mKicker"></div>
+            <h2 id="mTitle"></h2>
+          </div>
+          <button class="x" id="mClose" aria-label="Close case study">✕</button>
+        </div>
+        <div class="tabs" role="tablist">
+          <button
+            class="active"
+            data-tab="problem"
+            role="tab"
+            aria-selected="true"
+          >
+            1. Problem
+          </button>
+          <button data-tab="solution" role="tab" aria-selected="false">
+            2. Spec
+          </button>
+          <button data-tab="metrics" role="tab" aria-selected="false">
+            3. Results
+          </button>
+        </div>
+        <div class="dialog-b" id="mBody"></div>
+        <div class="dialog-f">
+          <span>Company details abstracted for confidentiality.</span
+          ><button class="btn btn-s btn-sm" id="mDone">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Resume overlay -->
+    <div
+      class="modal"
+      id="resumeModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="rTitle"
+    >
+      <div class="dialog">
+        <div class="dialog-h">
+          <div>
+            <div class="mono">RECRUITER OVERVIEW</div>
+            <h2 id="rTitle">David Adebayo — Candidate brief</h2>
+          </div>
+          <button class="x" id="rClose" aria-label="Close resume brief">
+            ✕
+          </button>
+        </div>
+        <div class="dialog-b">
+          <p>
+            <strong
+              >Product Analyst & Aspiring Product Manager · Abuja,
+              Nigeria</strong
+            ><br />david.adebayo.pm@gmail.com · +234 (0) 809 555 0192 · Hybrid
+            (Abuja/Lagos) or remote
+          </p>
+          <h4>Summary</h4>
+          <p>
+            Product Analyst with 3+ years in systems analysis, PRD authoring and
+            data-driven workflow optimisation across Nigerian fintech and
+            logistics.
+          </p>
+          <h4>Highlights</h4>
+          <p>
+            <strong>KoraPoint Solutions (2024–now):</strong> reconciliation
+            service cut dispute time from 18 hrs to 22 min. Progressive KYC
+            lifted onboarding from 38% to 71%.<br />
+            <strong>ApexLogistics Africa (2022–23):</strong> offline-first
+            dispatch stepper cut failed first attempts from 19.4% to 7.4%.<br />
+            <strong>Veritas Consulting (2021–22):</strong> automated client
+            reporting, 6 hrs to 45 min.
+          </p>
+          <h4>Education</h4>
+          <p>
+            B.Sc. Computer Science with Economics (2:1), University of Abuja,
+            2021. Product School Analytics (2024), Duke Advanced SQL (2023).
+          </p>
+        </div>
+        <div class="dialog-f">
+          <button class="btn btn-s btn-sm" onclick="window.print()">
+            Print / Save PDF</button
+          ><button class="btn btn-p btn-sm" id="rDone">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast" id="toast" role="alert" aria-live="polite"></div>
+
+    <script>
+      (function () {
+        "use strict";
+        var $ = function (s, c) {
+          return (c || document).querySelector(s);
+        };
+        var $$ = function (s, c) {
+          return Array.prototype.slice.call(
+            (c || document).querySelectorAll(s),
+          );
+        };
+
+        // Mobile menu
+        var menuBtn = $("#menuBtn"),
+          drawer = $("#drawer");
+        menuBtn.addEventListener("click", function () {
+          var o = drawer.classList.toggle("open");
+          menuBtn.setAttribute("aria-expanded", o);
+        });
+        $$("a", drawer).forEach(function (a) {
+          a.addEventListener("click", function () {
+            drawer.classList.remove("open");
+            menuBtn.setAttribute("aria-expanded", "false");
+          });
+        });
+
+        // Scrollspy
+        var secs = $$("main section[id]"),
+          links = $$(".nav a");
+        window.addEventListener(
+          "scroll",
+          function () {
+            var cur = "";
+            secs.forEach(function (s) {
+              if (window.scrollY >= s.offsetTop - 140) cur = s.id;
+            });
+            links.forEach(function (l) {
+              l.classList.toggle(
+                "active",
+                l.getAttribute("href") === "#" + cur,
+              );
+            });
+          },
+          { passive: true },
+        );
+
+        // Case study data
+        function ba(rows) {
+          return (
+            '<div class="ba">' +
+            rows
+              .map(function (r) {
+                return (
+                  '<div class="ba-row"><small>' +
+                  r.label +
+                  "<span>" +
+                  r.delta +
+                  '</span></small><div class="ba-bars">' +
+                  '<div class="ba-bar before" style="width:' +
+                  r.bw +
+                  '%">Before · ' +
+                  r.before +
+                  "</div>" +
+                  '<div class="ba-bar after" style="width:' +
+                  r.aw +
+                  '%">After · ' +
+                  r.after +
+                  "</div></div></div>"
+                );
+              })
+              .join("") +
+            "</div>"
+          );
+        }
+        function flow(items) {
+          return (
+            '<div class="flow">' +
+            items
+              .map(function (t, i) {
+                var g = t.charAt(0) === "*";
+                return (
+                  (i ? "<i>→</i>" : "") +
+                  "<div" +
+                  (g ? ' class="g"' : "") +
+                  ">" +
+                  (g ? t.slice(1) : t) +
+                  "</div>"
+                );
+              })
+              .join("") +
+            "</div>"
+          );
+        }
+        var studies = {
+          fintech: {
+            kicker: "FINTECH & PAYMENTS · KORAPOINT · 2024–25",
+            title: "Fixing stuck money in POS agency banking",
+            problem:
+              "<h4>The problem</h4><p>POS agents run on thin floats (roughly ₦80k–₦250k). When a customer is debited but the terminal shows a timeout, the agent cannot pay out cash. 4.2% of daily cross-bank cashouts fell into dispute and support took about 18 hours to respond.</p>" +
+              "<h4>What fieldwork showed</h4><p>I interviewed 24 operators across Wuse Market, Garki 2 and Kaduna and queried 45,000 dispute logs. It was not a frontend bug. Switch A confirmed success after about 180 seconds, but our gateway had given up at 60 seconds and marked the transaction as a dispute. 74% of reversals were delayed by that timing gap.</p>" +
+              flow([
+                "Customer debited",
+                "POS times out (60s)",
+                "*Marked PENDING_DISPUTE",
+                "Switch confirms (180s)",
+                "Agent stuck, no cash",
+              ]) +
+              "<div class=\"spec\">SELECT switch_name,\n  COUNT(transaction_id) AS total_timed_out,\n  AVG(EXTRACT(EPOCH FROM (webhook_received_at - initiated_at))) AS avg_delay_s,\n  SUM(CASE WHEN auto_reversal_state = 'FAILED' THEN 1 ELSE 0 END) AS unallocated\nFROM settlement_transactions\nWHERE status = 'EXCEPTION' AND created_at >= NOW() - INTERVAL '30 days'\nGROUP BY switch_name ORDER BY total_timed_out DESC;</div>",
+            solution:
+              "<h4>PRD: automated reconciliation service</h4><p>A 14-page spec for a stateless reconciliation poller with idempotent webhook ingestion, plus a self-service re-query button on the terminal.</p>" +
+              flow([
+                "Exception raised",
+                "*Query switch (mutual TLS)",
+                "Debit settled? Credit float",
+                "Reversed? Notify terminal",
+              ]) +
+              '<div class="spec">SPEC: POS Exception Resolution Service v1.2\n1. Idempotency key: UUID(terminal_id + rrn + amount + epoch)\n2. Retry backoff: 15s, 60s, 300s, 1800s\n3. DEBIT_SETTLED     -> credit merchant float immediately\n   REVERSED_AT_SOURCE -> "Customer refunded automatically"\n4. Terminal UX: "Re-query last transaction" enabled for 10 min</div>' +
+              "<p>I ran 3 grooming sessions with backend to settle webhook race conditions and use distributed Redis locks to prevent duplicate credits.</p>",
+            metrics:
+              "<h4>Impact</h4>" +
+              ba([
+                {
+                  label: "Dispute resolution time",
+                  before: "18 hrs",
+                  after: "22 min",
+                  delta: "−98%",
+                  bw: 100,
+                  aw: 6,
+                },
+                {
+                  label: "Support tickets",
+                  before: "100%",
+                  after: "58.8%",
+                  delta: "−41.2%",
+                  bw: 100,
+                  aw: 59,
+                },
+              ]) +
+              "<p><strong>₦34.2M</strong> of stalled float returned to active terminals within 90 days, and <strong>88.4%</strong> of exceptions now reconcile with no human review.</p>" +
+              '<div class="learn"><b>Learning:</b> in fintech, features have to respect the cash constraints of the person operating the hardware. When a transaction stalls, say so immediately.</div>',
+          },
+          logistics: {
+            kicker: "LOGISTICS & OPERATIONS · APEXLOGISTICS · 2023",
+            title: "An offline-first dispatch stepper for riders",
+            problem:
+              "<h4>The problem</h4><p>Across 120,000 monthly packages on the Abuja–Kano corridor, dispatch ran through 11 WhatsApp groups and paper waybills. Customers weren't warned before arrival, so 19.4% of first attempts failed. Smudged signatures made chain-of-custody disputes routine.</p>" +
+              "<h4>What I saw</h4><p>I spent two weeks shadowing dispatchers at the Idu Industrial transit hub. Mobile data dropped constantly in the suburbs, so any solution had to work with no signal.</p>" +
+              flow([
+                "WhatsApp assignment",
+                "Paper waybill",
+                "*No customer alert",
+                "Failed attempt",
+                "Custody dispute",
+              ]),
+            solution:
+              "<h4>Offline-first PWA under 2MB</h4><p>Built for budget Android phones, storing state in IndexedDB and syncing on reconnect. I wrote acceptance criteria for 5 dispatch states and an SMS OTP handover, working in bi-weekly sprints with 2 developers.</p>" +
+              '<div class="spec">As a dispatch rider in transit,\nI want to log my delivery attempt offline,\nSo my metrics stay accurate when coverage drops.\n\nScenario: Customer unavailable\n  Given the rider is inside the delivery geofence\n  When the rider taps "Recipient unavailable"\n  Then timestamp + GPS are saved to local storage\n  And an SMS with a reschedule link is queued\n  And the event syncs when the network returns</div>',
+            metrics:
+              "<h4>Results</h4>" +
+              ba([
+                {
+                  label: "Failed first attempts",
+                  before: "19.4%",
+                  after: "7.4%",
+                  delta: "−61.9%",
+                  bw: 100,
+                  aw: 38,
+                },
+                {
+                  label: "Hub batch assignment time",
+                  before: "38 min",
+                  after: "11 min",
+                  delta: "−71%",
+                  bw: 100,
+                  aw: 29,
+                },
+              ]) +
+              "<p>Delivery SLA compliance reached <strong>94.6%</strong> and every handover now has an OTP-confirmed digital record.</p>" +
+              '<div class="learn"><b>Learning:</b> field tools need zero friction: big touch targets, minimal keystrokes, and respect for unstable battery and connectivity.</div>',
+          },
+          growth: {
+            kicker: "B2B SAAS · KORAPOINT GATEWAY · 2024",
+            title: "Progressive KYC that stopped merchants dropping off",
+            problem:
+              "<h4>The problem</h4><p>Nigerian AML rules require verifying corporate entities (CAC, TIN, director BVN). Our portal demanded all of it, plus manual approval, before a merchant could even read the API docs. 62% abandoned signup and the median time to a first test transaction was 9.4 days.</p>" +
+              "<h4>What the data said</h4><p>Mixpanel funnels showed the steepest exit at the TIN and CAC upload fields. Developers evaluating us moved to competitors with instant sandboxes.</p>" +
+              flow([
+                "Signup",
+                "*TIN + CAC upload (steepest drop)",
+                "Manual review (days)",
+                "First API test",
+              ]),
+            solution:
+              "<h4>Tiered onboarding</h4><p>I ran a discovery workshop with Risk, Compliance and Engineering and established that verification is only legally required before disbursing real funds, not for sandbox access.</p>" +
+              flow([
+                "Tier 0 Sandbox",
+                "*Tier 1 Live, capped",
+                "Tier 2 Full settlement",
+              ]) +
+              '<div class="spec">TIER 0  Developer sandbox\n  Needs: email + mobile OTP\n  Gets:  test API keys, simulated webhooks, mock cards\nTIER 1  Live collection (capped)\n  Needs: business name + BVN + bank account name match\n  Gets:  live payments up to ₦500,000 / month\nTIER 2  Unrestricted settlement\n  Needs: CAC documents + director identity\n  Gets:  uncapped, next-day bank sweep</div>',
+            metrics:
+              "<h4>Results</h4>" +
+              ba([
+                {
+                  label: "Onboarding completion",
+                  before: "38.0%",
+                  after: "71.0%",
+                  delta: "+33 pts",
+                  bw: 54,
+                  aw: 100,
+                },
+                {
+                  label: "Time to first API test",
+                  before: "9.4 days",
+                  after: "< 4 hrs",
+                  delta: "−98%",
+                  bw: 100,
+                  aw: 4,
+                },
+              ]) +
+              "<p>Automated name-to-account matching removed 68% of manual document review (about <strong>3.2x</strong> compliance throughput), and 30-day active merchant activations grew <strong>48%</strong>.</p>" +
+              '<div class="learn"><b>Learning:</b> compliance and growth aren\'t opposed. Knowing where the statute actually draws the line lets you build ramps that satisfy both.</div>',
+          },
+        };
+
+        var modal = $("#caseModal"),
+          mBody = $("#mBody"),
+          tabBtns = $$(".tabs button"),
+          curKey = "fintech",
+          curTab = "problem",
+          lastFocus = null;
+        function render() {
+          var s = studies[curKey];
+          $("#mKicker").textContent = s.kicker;
+          $("#mTitle").textContent = s.title;
+          mBody.innerHTML = s[curTab];
+        }
+        function setTab(t) {
+          curTab = t;
+          tabBtns.forEach(function (b) {
+            var a = b.getAttribute("data-tab") === t;
+            b.classList.toggle("active", a);
+            b.setAttribute("aria-selected", a);
+          });
+          render();
+          $(".dialog", modal).scrollTop = 0;
+        }
+        function openCase(k) {
+          lastFocus = document.activeElement;
+          curKey = k;
+          setTab("problem");
+          modal.classList.add("open");
+          document.body.style.overflow = "hidden";
+          $("#mClose").focus();
+        }
+        function closeCase() {
+          if (!modal.classList.contains("open")) return;
+          modal.classList.remove("open");
+          document.body.style.overflow = "";
+          if (lastFocus) lastFocus.focus();
+        }
+        $$(".work-card").forEach(function (c) {
+          c.addEventListener("click", function () {
+            openCase(c.getAttribute("data-study"));
+          });
+          c.addEventListener("keydown", function (e) {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              openCase(c.getAttribute("data-study"));
+            }
+          });
+        });
+        tabBtns.forEach(function (b) {
+          b.addEventListener("click", function () {
+            setTab(b.getAttribute("data-tab"));
+          });
+        });
+        $("#mClose").addEventListener("click", closeCase);
+        $("#mDone").addEventListener("click", closeCase);
+
+        // Resume modal
+        var rm = $("#resumeModal");
+        function openResume() {
+          rm.classList.add("open");
+          document.body.style.overflow = "hidden";
+        }
+        function closeResume() {
+          rm.classList.remove("open");
+          if (!modal.classList.contains("open"))
+            document.body.style.overflow = "";
+        }
+        $("#resumeBtn").addEventListener("click", openResume);
+        $("#rClose").addEventListener("click", closeResume);
+        $("#rDone").addEventListener("click", closeResume);
+        [modal, rm].forEach(function (m) {
+          m.addEventListener("click", function (e) {
+            if (e.target === m) {
+              closeCase();
+              closeResume();
+            }
+          });
+        });
+        window.addEventListener("keydown", function (e) {
+          if (e.key === "Escape") {
+            closeCase();
+            closeResume();
+          }
+        });
+
+        // Toast + copy
+        var toast = $("#toast");
+        function showToast(t) {
+          toast.textContent = t;
+          toast.classList.add("show");
+          setTimeout(function () {
+            toast.classList.remove("show");
+          }, 2600);
+        }
+        $("#copyBtn").addEventListener("click", function () {
+          var e = "david.adebayo.pm@gmail.com";
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard
+              .writeText(e)
+              .then(function () {
+                showToast("Email copied");
+              })
+              .catch(function () {
+                showToast("Please email: " + e);
+              });
+          } else showToast("Please email: " + e);
+        });
+
+        // Contact form (opens a prefilled email; nothing is stored)
+        function esc(s) {
+          return s
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;");
+        }
+        var form = $("#contactForm"),
+          st = $("#cStatus");
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          var n = $("#cName").value.trim(),
+            m = $("#cEmail").value.trim(),
+            s = $("#cSubject").value.trim(),
+            g = $("#cMsg").value.trim();
+          if (!n || !m || !g) {
+            st.textContent = "Please fill in your name, email and message.";
+            st.className = "status err";
+            return;
+          }
+          var uri =
+            "mailto:david.adebayo.pm@gmail.com?subject=" +
+            encodeURIComponent(s || "Product opportunity inquiry") +
+            "&body=" +
+            encodeURIComponent(
+              "Hi David,\n\n" + g + "\n\nBest,\n" + n + " (" + m + ")",
+            );
+          st.innerHTML =
+            "<strong>Thanks, " +
+            esc(n) +
+            '.</strong> <a href="' +
+            uri +
+            '" style="text-decoration:underline;font-weight:700">Open your email app with this message ↗</a>';
+          st.className = "status ok";
+        });
+      })();
+    </script>
+  </body>
+</html>
